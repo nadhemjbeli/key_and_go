@@ -1,0 +1,535 @@
+@font-face {
+  font-family: 'CascadiaMonoRegular';
+  src: url('../fonts/CascadiaMonoPL-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'CascadiaMonoBold';
+  src: url('../fonts/CascadiaMonoPL-Bold.otf') format('opentype');
+}
+
+$beige : #eae3da;
+$bleu_fonce : #2c4466;
+$default-font-regular: 'CascadiaMonoRegular';
+$default-font-bold: 'CascadiaMonoBold';
+
+body{
+  font-family: $default-font-regular;
+  background-color: $beige ;
+}
+.header-logo {
+  background: url("../img/image7.png") no-repeat;
+  background-size: auto 100%;
+  height: auto; /* Set height to auto to allow it to adjust based on content */
+}
+
+.header-lg {
+  background-color: rgba(234, 227, 218, 0.687);
+}
+
+.navbar-container {
+  background-color: rgba(234, 227, 218, 0.75);
+  color: $bleu_fonce ;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+  .animated-content {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0); // Start position outside the viewport
+  }
+  .top-div{
+    background-color: rgba(234, 227, 218, 0);
+    font-family: $default-font-bold;
+    text-align: right;
+    padding-right: 50px;
+    top: 0;
+    width: 100%;
+    //height: 50px; // Adjust height as needed
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out; // Apply transition to transform property
+    transform: translateY(0); // Start position outside the viewport
+  }
+  &.hide .top-div {
+    transform: translateY(-100%);
+  }
+
+  &.display-none {
+    .top-div {
+      transition: transform 0.5s ease-in-out;
+      display: none;
+    }
+  }
+}
+
+#navbarNav a{
+  color:$bleu_fonce;
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: $default-font-regular;
+  border-radius: 15px;
+}
+
+#navbarNav a:hover{
+  color:$beige;
+  border-radius: 15px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .header-logo {
+    background-size: 100% auto; /* Adjust background size for mobile */
+  }
+}
+
+
+
+.center-contents {
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* Arrange contents vertically */
+  align-items: center; /* Center contents horizontally */
+}
+
+.centered-contents {
+  display: flex;
+  flex-direction: column; /* Arrange contents vertically */
+  align-items: center; /* Center contents horizontally */
+  .logo-centered {
+    color: $beige;
+    display: flex;
+    flex-direction: column; /* Arrange contents vertically */
+    align-items: center; /* Center vertically */
+    @media screen and (min-width: 768px) {
+      width: 50%; /* Initial width for desktop */
+    }
+    @media screen and (max-width: 768px) {
+      width: 80%; /* Initial width for desktop */
+    }
+    margin: 0 auto 20px; /* Center the div horizontally */
+    .title{
+      font-size: 50px;
+      font-weight: 700;
+    }
+    .slogan{
+      font-size: 20px;
+    }
+  }
+}
+
+//.logo-centered div img {
+//  max-width: 100%; /* Ensure image doesn't exceed its container */
+//  height: 25vh;
+//  user-select: none; /* Prevent image selection */
+//  -moz-user-select: none; /* Firefox */
+//  -webkit-user-drag: none; /* Safari */
+//  -webkit-user-select: none; /* Safari */
+//  -ms-user-select: none; /* Internet Explorer/Edge */
+//}
+
+.tm-main-content{
+  .ie-container-width-fix-2{
+    border-radius: 15px;
+  }
+  .react-datepicker-wrapper{
+    width: 100%;
+    input, .date{
+      height:2.7rem;
+    }
+  }
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .annonces{
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .annonce{
+        width: 400px; // Set fixed width for each card
+        height: 450px; // Set fixed height for each card
+        overflow: hidden; // Ensure content doesn't overflow
+        padding: 30px;
+        border: 2px solid $bleu_fonce;
+        border-radius: 15px;
+        box-shadow: 4px 7px 7px 0 #00000042;
+        margin: 18px;
+        background-color: white;
+        .img{
+          background-color: $beige;
+          width: 100%; // Ensure image covers entire container
+          height: calc(100% - 150px); // Adjust height to leave space below
+          overflow: hidden;
+          border-radius: 15px;
+          img{
+            width: 100%; // Ensure image covers entire container
+            height: 100%; // Adjust height to leave space below
+            object-fit: cover; // Zoom image to cover container
+            border-radius: 15px;
+            transition: 400ms;
+            cursor: pointer;
+
+            &:hover{
+              filter: grayscale(50%);
+              transform: scale(1.03);
+            }
+          }
+        }
+
+        .location{
+          margin-top: 1rem;
+        }
+
+      }
+    }
+  }
+
+
+}
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+/* Adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .logo-centered div img {
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+    height: 70vh;
+    user-select: none; /* Prevent image selection */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-drag: none; /* Safari */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+}
+.annonce-details {
+  position: relative;
+  .empty {
+    height: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .kg-content {
+      max-width: 100%; /* Ensure full viewport width */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allow elements to wrap for responsiveness */
+      padding: 10px; /* Add some padding for visual appeal */
+
+      .all-annonce{
+        .annonces {
+          display: flex;
+          flex-wrap: wrap; /* Wrap announcements on smaller screens */
+          gap: 10px; /* Maintain spacing between announcements */
+          //background-color: white;
+          border-radius: 15px;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+          .part1 {
+            width: 100%; /* Take up full width on mobile */
+            height: auto; /* Allow responsive height */
+            padding: 0;
+            overflow: hidden;
+            margin: 0 11px 0 0 ;
+
+            .first-photo {
+              width: 100%; /* Cover entire container */
+              height: auto; /* Maintain aspect ratio */
+              object-fit: cover;
+              transition: 400ms ease;
+              cursor: pointer;
+
+              &:hover {
+                filter: grayscale(50%);
+                transform: scale(1.03);
+              }
+            }
+          }
+
+          .part2 {
+            position: relative;
+            width: 100%; /* Take up full width on mobile */
+            display: flex;
+            flex-wrap: wrap; /* Wrap announcements on smaller screens */
+            gap: 10px; /* Maintain spacing between announcements */
+            padding: 0;
+            margin: 0;
+
+            .annonce {
+              width: calc(50% - 10px); /* Two announcements per row on mobile */
+              height: calc(150px + 10px); /* Allow responsive height */
+              overflow: hidden;
+              padding: 0;
+              margin: 0;
+              gap: 10px; /* Maintain spacing within announcements */
+              box-shadow: none; /* Remove shadow for better performance */
+              background-color: rgba(0, 0, 0, 0.5);
+              .small-photos {
+                width: 100%; /* Cover entire card container */
+                height: calc(150px + 10px); /* Maintain aspect ratio */
+                object-fit: cover;
+              }
+            }
+
+            .check-other-images{
+              position: absolute;
+              border-radius: 15px;
+              right: calc((10% - 5px)/4);
+              bottom: calc((150px + 10px)/3);
+
+            }
+          }
+        }
+
+
+
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .kg-content {
+      max-width: 100%; /* Ensure full viewport width */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Allow elements to wrap for responsiveness */
+      //padding: 10px; /* Add some padding for visual appeal */
+
+      .all-annonce{
+        width: 90%;
+        .annonces {
+          display: flex;
+          flex-wrap: wrap; /* Wrap announcements on smaller screens */
+          gap: 10px; /* Maintain spacing between announcements */
+          //background-color: white;
+          border-radius: 15px;
+          overflow: hidden;
+          padding: 0;
+          margin: 0 auto;
+
+          .part1 {
+            width: calc(50% - 10px); /* Take up full width on mobile */
+            height: calc(50% - 10px); /* Allow responsive height */
+            padding: 0;
+            margin: 0 0 23px 0;
+            overflow: hidden;
+
+            .first-photo {
+              width: 100%; /* Cover entire container */
+              height: 30rem; /* Maintain aspect ratio */
+              object-fit: cover;
+              transition: 400ms;
+              cursor: pointer;
+
+              &:hover {
+                filter: grayscale(70%);
+                transform: scale(1.03);
+              }
+            }
+          }
+
+          .part2 {
+            position: relative;
+            width: 50%; /* Take up full width on mobile */
+            display: flex;
+            flex-wrap: wrap; /* Wrap announcements on smaller screens */
+            grid-column-gap: 10px; /* Maintain spacing between announcements */
+            grid-auto-flow: dense;
+            padding: 0;
+            margin: 0;
+            grid-row-gap: 0;
+
+            .annonce {
+              position: relative;
+              width: calc(50% - 5px); /* Two announcements per row on mobile */
+              height: calc(16.65rem - 2rem); /* Allow responsive height */
+              overflow: hidden;
+              padding: 0;
+              margin: 0;
+              gap: 2rem; /* Maintain spacing within announcements */
+              box-shadow: none; /* Remove shadow for better performance */
+              background-color: rgba(0, 0, 0, 0.5);
+              .small-photos {
+                width: 100%; /* Cover entire card container */
+                height: 100%; /* Maintain aspect ratio */
+                object-fit: cover;
+                margin: 0;
+                transition: 400ms;
+                cursor: pointer;
+
+                &:hover {
+                  filter: grayscale(70%);
+                  transform: scale(1.03);
+                }
+
+              }
+            }
+            .check-other-images{
+              position: absolute;
+              border-radius: 15px;
+              right: calc((30% - 5px)/3);
+              bottom: 100px;
+
+            }
+          }
+        }
+
+
+        .section-desc{
+          margin: 0;
+          width: 100%;
+          .description{
+            margin: 0 auto;
+            .part1{
+              //min-width: 60%;
+              .btn-desc{
+                &:hover, &.active{
+                  background-color: $bleu_fonce;
+                  color: $beige;
+                }
+              }
+            }
+            .part2{
+              //min-width: 30%;
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .kg-content{
+    .prix{
+      margin-bottom: 1rem;
+      span{
+        font-size: 1.5rem;
+       strong{
+         font-weight: bolder;
+       }
+      }
+    }
+    .prix-nuits{
+      span{
+        font-size: 1rem;
+       strong{
+         font-weight: bolder;
+       }
+      }
+    }
+
+  }
+  .modal {
+    position: fixed; /* Fix modal to viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    z-index: 999; /* Ensure topmost layer */
+
+    &[data-open="true"] {
+      opacity: 1; /* Show modal on open */
+    }
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center content */
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+.hote-list-annonces{
+  margin: 0;
+  min-height: 89vh;
+  position: relative;
+
+
+
+}
+
+
+
+
+.details-modal{
+  .details-modal-popup{
+    overflow-y: auto;
+
+    .announcement-details {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      .details-row {
+        margin: .5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .details-column {
+          flex: 1;
+        }
+      }
+
+      .photos {
+        margin-top: 20px;
+
+        .photo {
+          width: 100px;
+          margin-right: 5px;
+        }
+      }
+
+      .host-details {
+        margin-top: 20px;
+
+        .host-photo {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+
+// TODO footer class
+
+.footer{
+  margin: 0;
+  min-height: 10vh;
+  position: absolute;
+  bottom: -10vh;
+}

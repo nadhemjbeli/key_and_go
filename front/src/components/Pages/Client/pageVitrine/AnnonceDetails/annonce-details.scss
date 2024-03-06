@@ -1,0 +1,87 @@
+.slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .carousel-container {
+    position: relative;
+    //max-width: 70%; // Adjust as needed
+    width: auto;
+    height: auto; // Adjust as needed
+    object-fit: cover;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    .carousel{
+      max-width: 100%; // Adjust as needed
+      width: auto;
+      height: auto; // Adjust as needed
+      object-fit: cover;
+      .carousel-inner {
+        width: 100%;
+        .img-fluid{
+          width: auto;
+          min-height: 100vh;
+          max-height: 100vh;
+          @media (min-width: 100wh) {
+            max-width: 100vh;
+            @media (min-height: 101vh) {
+              max-height: 100vh;
+            }
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+  }
+
+
+
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0; // Remove padding to adjust the size of the icons
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+

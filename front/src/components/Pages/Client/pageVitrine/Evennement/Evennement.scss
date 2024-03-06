@@ -1,0 +1,215 @@
+$bleu_fonce_transparent:rgba(44, 68, 102, .5);
+$beige : #eae3da;
+$bleu_fonce : #2c4466;
+
+@font-face {
+  font-family: 'CascadiaMonoBold';
+  src: url('../../../../../assets/fonts/CascadiaMonoPL-Bold.otf') format('opentype');
+
+}
+#tm-section-1{
+  margin-bottom: 1rem;
+  padding: 1rem;
+  .container{
+    margin-bottom: 1rem;
+    h4.titre{
+      color: $beige;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+
+  .evennements-container {
+    //overflow: hidden;
+    width: 70vw;
+    border-radius: 15px;
+    max-height: 23rem;
+    margin: 2rem 0;
+
+    .evennements {
+      max-width: 100%; // Adjust as needed
+      width: auto;
+      //height: auto; // Adjust as needed
+      object-fit: cover;
+      max-height: 26rem;
+      overflow: hidden;
+      border-radius: 15px;
+
+      .carousel-inner {
+        object-fit: cover;
+        border-radius: 15px;
+
+        .carousel-item {
+          //width: 100%;
+          //margin: 0;
+          //max-width: 80%;
+          overflow: hidden;
+          border-radius: 15px;
+          cursor: pointer;
+
+          img {
+            max-height: 80%;
+            border-radius: 15px;
+
+          }
+
+          .carousel-caption {
+            position: absolute;
+            top: 20rem;
+            max-width: 70%;
+
+            .caption {
+              background-color: $bleu_fonce_transparent;
+              padding: .5rem;
+              border-radius: 15px;
+              width: 100%;
+              color: $beige;
+              transition: opacity 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+  .datepicker{
+    margin-left: calc(16.1666%);
+    //margin-left: calc(16.1666%/2);
+    //margin-right: calc(16.1666%);
+
+    //margin-right: calc(33.3333%);
+  }
+  //#chambres{
+  //  margin-top: -12%;
+  //  height: 3.5rem;
+  //  font-size: 1rem;
+  //}
+}
+
+@media screen and (max-width: 768px) {
+  .evennements-container {
+    min-width: 90%;
+    max-height: 25rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+
+    .evennements {
+      max-width: 100%; // Adjust as needed
+      width: auto;
+      max-height: 15rem;
+      object-fit: cover;
+      //max-height: 30rem;
+      overflow: hidden;
+      border-radius: 15px;
+
+      .carousel-inner {
+        object-fit: cover;
+        border-radius: 15px;
+
+        .carousel-item {
+          //width: 100%;
+          //margin: 0;
+          overflow: hidden;
+          border-radius: 15px;
+          cursor: pointer;
+
+          img {
+            max-height: 80%;
+            border-radius: 15px;
+
+          }
+
+          .carousel-caption {
+            position: absolute;
+            top: 8rem;
+            max-width: 70%;
+
+            .caption {
+              background-color: $bleu_fonce_transparent;
+              padding: .5rem;
+              border-radius: 15px;
+              width: 100%;
+              color: $beige;
+              h3{
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.kg-content{
+
+  .annonces.evennements{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .annonce{
+      width: 400px; // Set fixed width for each card
+      height: 450px; // Set fixed height for each card
+      overflow: hidden; // Ensure content doesn't overflow
+      padding: 30px;
+      border: 2px solid $bleu_fonce;
+      border-radius: 15px;
+      box-shadow: 4px 7px 7px 0 #00000042;
+      margin: 18px;
+      background-color: white;
+      .img{
+        background-color: $beige;
+        width: 100%; // Ensure image covers entire container
+        height: calc(100% - 150px); // Adjust height to leave space below
+        overflow: hidden;
+        border-radius: 15px;
+        img{
+          width: 100%; // Ensure image covers entire container
+          height: 100%; // Adjust height to leave space below
+          object-fit: cover; // Zoom image to cover container
+          border-radius: 15px;
+          transition: 400ms;
+          cursor: pointer;
+
+          &:hover{
+            filter: grayscale(50%);
+            transform: scale(1.03);
+          }
+        }
+      }
+
+      .location{
+        margin-top: 1rem;
+      }
+
+    }
+  }
+
+  .search-form{
+    .tm-bg-dark-blue{
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      .react-datepicker-wrapper{
+        width: 100%;
+        input{
+          height:2.7rem;
+        }
+      }
+      i.fa{
+        color: $bleu_fonce;
+      }
+      button.tm-btn-search{
+        //font-weight: 900;
+        font-family: "CascadiaMonoBold";
+        //font-size: .75rem;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      User's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!--    <link rel="stylesheet" href="%PUBLIC_URL%/front/src/components/css/navbar.css" />-->
+<!--    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />-->
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />-->
+<!--    <link rel="stylesheet" href="assets/slick/slick.css" />-->
+<!--    <link rel="stylesheet" href="assets/slick/slick-theme.css" />-->
+<!--    <link rel="stylesheet" href="assets/css/datepicker.css" />-->
+<!--    <link rel="stylesheet" href="assets/css/tooplate-style.css" />-->
+<!--    <link rel="stylesheet" href="assets/css/style.css" />-->
+
+<!--    !!!fonts!!!-->
+<!--    <link rel="stylesheet" href="assets/fonts/CascadiaMono-Bold.otf" />-->
+<!--    <link rel="stylesheet" href="assets/fonts/CascadiaMonoPL-Regular.otf" />-->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+<!--    <script src="assets/js/jquery-1.11.3.min.js" ></script>-->
+<!--    <script src="assets/js/popper.min.js" ></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha512-ju6u+4bPX50JQmgU97YOGAXmRMrD9as4LE05PdC3qycsGQmjGlfm041azyB1VfCXpkpt1i9gqXCT6XuxhBJtKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="assets/js/bootstrap.min.js" ></script>-->
+<!--    <script src="assets/js/datepicker.min.js" ></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--    <script src="assets/js/jquery.singlePageNav.min.js" ></script>-->
+<!--    <script src="assets/slick/slick.js" ></script>-->
+    <script>
+
+      /* Google map
+      ------------------------------------------------*/
+      // var map = '';
+      // var center;
+      //
+      // function initialize() {
+      //   var mapOptions = {
+      //     zoom: 16,
+      //     center: new google.maps.LatLng(13.7567928,100.5653741),
+      //     scrollwheel: false
+      //   };
+      //
+      //   map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+      //
+      //   google.maps.event.addDomListener(map, 'idle', function() {
+      //     calculateCenter();
+      //   });
+      //
+      //   google.maps.event.addDomListener(window, 'resize', function() {
+      //     map.setCenter(center);
+      //   });
+      // }
+      //
+      // function calculateCenter() {
+      //   center = map.getCenter();
+      // }
+      //
+      // function loadGoogleMap(){
+      //   var script = document.createElement('script');
+      //   script.type = 'text/javascript';
+      //   script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+      //   document.body.appendChild(script);
+      // }
+      //
+      // function setCarousel() {
+      //
+      //   if ($('.tm-article-carousel').hasClass('slick-initialized')) {
+      //     $('.tm-article-carousel').slick('destroy');
+      //   }
+      //
+      //   if($(window).width() < 438){
+      //     // Slick carousel
+      //     $('.tm-article-carousel').slick({
+      //       infinite: false,
+      //       dots: true,
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1
+      //     });
+      //   }
+      //   else {
+      //     $('.tm-article-carousel').slick({
+      //       infinite: false,
+      //       dots: true,
+      //       slidesToShow: 2,
+      //       slidesToScroll: 1
+      //     });
+      //   }
+      // }
+      //
+      // function setPageNav(){
+      //   if($(window).width() > 991) {
+      //     $('#tm-top-bar').singlePageNav({
+      //       currentClass:'active',
+      //       offset: 79
+      //     });
+      //   }
+      //   else {
+      //     $('#tm-top-bar').singlePageNav({
+      //       currentClass:'active',
+      //       offset: 65
+      //     });
+      //   }
+      // }
+      //
+      // function togglePlayPause() {
+      //   vid = $('.tmVideo').get(0);
+      //
+      //   if(vid.paused) {
+      //     vid.play();
+      //     $('.tm-btn-play').hide();
+      //     $('.tm-btn-pause').show();
+      //   }
+      //   else {
+      //     vid.pause();
+      //     $('.tm-btn-play').show();
+      //     $('.tm-btn-pause').hide();
+      //   }
+      // }
+      //
+      // $(document).ready(function(){
+      //
+      //   $(window).on("scroll", function() {
+      //     if($(window).scrollTop() > 100) {
+      //       $(".tm-top-bar").addClass("active");
+      //     } else {
+      //       //remove the background property so it comes transparent again (defined in your css)
+      //       $(".tm-top-bar").removeClass("active");
+      //     }
+      //   });
+      //
+      //   // Google Map
+      //   loadGoogleMap();
+
+        // Date Picker
+        // const pickerCheckIn = datepicker('#inputCheckIn');
+        // const pickerCheckOut = datepicker('#inputCheckOut');
+        //
+        // // Slick carousel
+        // setCarousel();
+        // setPageNav();
+        //
+        // $(window).resize(function() {
+        //   setCarousel();
+        //   setPageNav();
+        // });
+        //
+        // // Close navbar after clicked
+        // $('.nav-link').click(function(){
+        //   $('#mainNav').removeClass('show');
+        // });
+        //
+        // // Control video
+        // $('.tm-btn-play').click(function() {
+        //   togglePlayPause();
+        // });
+        //
+        // $('.tm-btn-pause').click(function() {
+        //   togglePlayPause();
+        // });
+        //
+        // // Update the current year in copyright
+        // $('.tm-current-year').text(new Date().getFullYear());
+
+    </script>
+  </body>
+</html>
